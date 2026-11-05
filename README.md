@@ -1,16 +1,34 @@
-# React + Vite
+# feature-flag-fun
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal side project for learning new frontend features on a modern, up-to-date stack. The first topic is **feature flags**.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node 22
+- Yarn classic (v1)
 
-## React Compiler
+## Scripts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Command             | What it does                                            |
+| ------------------- | ------------------------------------------------------- |
+| `yarn start`        | Vite dev server with HMR                                |
+| `yarn build`        | Type-check (`tsc -b`), then build the production bundle |
+| `yarn preview`      | Serve the built `dist/`                                 |
+| `yarn lint`         | ESLint (type-aware) over the whole repo                 |
+| `yarn lintfix`      | ESLint with `--fix`                                     |
+| `yarn pretty`       | Format everything with Prettier                         |
+| `yarn pretty:check` | Check formatting without writing (useful for CI)        |
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19, TypeScript 6 (strict), Vite 8 with `@vitejs/plugin-react` (Oxc)
+- ESLint 10 flat config, composed from each tool's own presets:
+  - `typescript-eslint` `strictTypeChecked` + `stylisticTypeChecked`
+  - `@eslint-react/eslint-plugin` (`recommended-type-checked`)
+  - `eslint-plugin-react-hooks` and `eslint-plugin-react-refresh`
+  - `eslint-plugin-jsx-a11y-x` (accessibility)
+  - `eslint-plugin-import-x` with the TypeScript resolver
+  - `eslint-config-prettier` last, so ESLint never fights Prettier
+- Prettier 3 owns formatting (see `.prettierrc`)
+
+The React Compiler is not enabled. To add it, see the [React Compiler installation docs](https://react.dev/learn/react-compiler/installation).

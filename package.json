@@ -5,8 +5,11 @@
 	"type": "module",
 	"scripts": {
 		"start": "vite",
-		"build": "vite build",
+		"build": "tsc -b && vite build",
 		"lint": "eslint .",
+		"lintfix": "eslint . --fix",
+		"pretty": "prettier . --write",
+		"pretty:check": "prettier . --check",
 		"preview": "vite preview"
 	},
 	"dependencies": {
@@ -14,14 +17,23 @@
 		"react-dom": "19.3.1"
 	},
 	"devDependencies": {
+		"@eslint-react/eslint-plugin": "5.28.8",
 		"@eslint/js": "10.0.1",
+		"@types/node": "22.20.5",
 		"@types/react": "19.3.0",
 		"@types/react-dom": "19.3.0",
 		"@vitejs/plugin-react": "6.1.2",
 		"eslint": "10.14.0",
+		"eslint-config-prettier": "10.1.8",
+		"eslint-import-resolver-typescript": "4.4.5",
+		"eslint-plugin-import-x": "4.17.1",
+		"eslint-plugin-jsx-a11y-x": "0.2.0",
 		"eslint-plugin-react-hooks": "7.1.1",
 		"eslint-plugin-react-refresh": "0.5.7",
 		"globals": "17.13.0",
+		"prettier": "3.9.10",
+		"typescript": "6.0.3",
+		"typescript-eslint": "8.72.1",
 		"vite": "8.3.6"
 	}
 }
