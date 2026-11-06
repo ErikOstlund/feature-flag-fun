@@ -32,3 +32,18 @@ A personal side project for learning new frontend features on a modern, up-to-da
 - Prettier 3 owns formatting (see `.prettierrc`)
 
 The React Compiler is not enabled. To add it, see the [React Compiler installation docs](https://react.dev/learn/react-compiler/installation).
+
+## Project structure
+
+```
+src/
+├── assets/       # static files (images, fonts)
+├── components/   # reusable components
+├── features/     # feature modules
+├── routes/       # routing
+├── styles/       # shared styles
+├── types/        # shared types
+└── utils/        # constants/, helpers/, hooks/
+```
+
+Each `src/` root folder has a bare import alias, e.g. `import { X } from "utils/helpers/..."`. Aliases are defined in both `tsconfig.app.json` (`paths`) and `vite.config.ts` (`resolve.alias`); keep the two in sync.
