@@ -42,6 +42,7 @@ src/
 ├── features/     # feature modules
 ├── routes/       # routing
 ├── styles/       # shared styles
+├── theme/        # UI library theme/provider config
 ├── types/        # shared types
 └── utils/        # constants/, helpers/, hooks/
 ```

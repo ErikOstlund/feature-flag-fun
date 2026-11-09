@@ -372,6 +372,122 @@
   resolved "https://registry.yarnpkg.com/@oxc-project/types/-/types-0.156.0.tgz#00e35b1ead490d81b4c7fe1dbfe35fc55e89c5e6"
   integrity sha512-1Duyg48TdJNdyhEB8Xn1L36bT9Pv6GUtlKjHxOys8xkaF/rQq3XJE+bAurSK/AgIz5mGFsb77cn9Pb20+WCScw==
 
+"@primeicons/core@8.0.2":
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@primeicons/core/-/core-8.0.2.tgz#83de60b1b73a3df891a1e64cd673bad91a804642"
+  integrity sha512-VySryvfIQH2xzNVXISIQg357gAt4oFYX2vKy27tWMB7UvEHu/gjRpeilBty3LBln7oVuAdFLPYOWr/FtTH8eJw==
+  dependencies:
+    "@primeuix/utils" "^0.8.0"
+
+"@primeicons/react@^8.0.2":
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@primeicons/react/-/react-8.0.2.tgz#ee636ff2177c604370027bf8bf8d8846bdafb9cc"
+  integrity sha512-PYI2WiehAP3CRIJW5YyGGu+IKh5Od1LUw9/Xu8/yqkbGLvEh5e4pel7gnqNAPybqNQRu8Up4Kvp7xWDZiCLApA==
+  dependencies:
+    "@primeicons/core" "8.0.2"
+    "@primeuix/utils" "^0.8.0"
+
+"@primereact/core@11.2.2":
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/@primereact/core/-/core-11.2.2.tgz#4ba1aae2b372377e7a722c5847b1cd55129c49c2"
+  integrity sha512-jJriUC9rGoMvSSjzkLmxziQ0znYQc+PgvZKyD+wB2FUpONL0kcKtbd1hK5/I4PEdGIu93+7xsZ/t824WfjgGpg==
+  dependencies:
+    "@primereact/hooks" "11.2.2"
+    "@primereact/types" "11.2.2"
+    "@primeui/license-manager" "^1.0.0"
+    "@primeuix/locale" "^0.1.0"
+    "@primeuix/motion" "^1.0.0"
+    "@primeuix/styled" "^1.2.0"
+    "@primeuix/utils" "^0.8.3"
+
+"@primereact/headless@11.2.2":
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/@primereact/headless/-/headless-11.2.2.tgz#3b621d7f77ca87c68ffda973d0ee954aeca7cf53"
+  integrity sha512-0keiPXDQozTePRCExynTOah6MvBsrgLNxhW8NSTCe08H8VcE1rl8OaBKwyCbkacvNkZ2fG2EHx2rXGFFoMPbew==
+  dependencies:
+    "@primereact/core" "11.2.2"
+    "@primereact/hooks" "11.2.2"
+    "@primereact/types" "11.2.2"
+    "@primeui/license-manager" "^1.0.0"
+    "@primeuix/styled" "^1.2.0"
+    "@primeuix/utils" "^0.8.3"
+
+"@primereact/hooks@11.2.2":
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/@primereact/hooks/-/hooks-11.2.2.tgz#f4dbc763b32fce7b09e4bd18677fe7accdcea56d"
+  integrity sha512-spo8Cjahl6CR0istzAMCC7oHrFvjObBpnXG3+XH9CYWo2zJ3A4Dff/nU+EzpfgAJey57v0UPbDKtTyMDu1jzoQ==
+  dependencies:
+    "@primeuix/utils" "^0.8.3"
+
+"@primereact/styles@11.2.2":
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/@primereact/styles/-/styles-11.2.2.tgz#65ed93cff141d0a67924d3e4bbf75c8795c70f96"
+  integrity sha512-/VVfB0InmMPV2vzLN4YxAo58NaQq0AQvOdJcQ2pVHqlu+w4PCF41SL+Ki9CPjOT7n7vC3aY/bGQ8lL22Igjq0A==
+  dependencies:
+    "@primereact/types" "11.2.2"
+    "@primeuix/styled" "^1.2.0"
+    "@primeuix/styles" "^3.1.0"
+    "@primeuix/utils" "^0.8.3"
+
+"@primereact/types@11.2.2":
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/@primereact/types/-/types-11.2.2.tgz#d7a181d9ddd42539128d773030614328f148f788"
+  integrity sha512-N835KSkTS4wFwLXtNd/zrNzEYudH0xK8H3NYjgMMpJDUCWFgBHLPY+rB2liV8/1UXtvJMp2gxZKZeBLT097lJQ==
+
+"@primereact/ui@^11.2.2":
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/@primereact/ui/-/ui-11.2.2.tgz#94d5e564a95bd144e3a5cb7bbba439d518e3fd98"
+  integrity sha512-OMohSThudeGavYplSLOTdyYGUgl8aVZKCIl14cHTaHF4SAiEVxYS+8eI0EBq4FjA6ZvAfenWt2q4Pq4ov9tqbg==
+  dependencies:
+    "@primereact/styles" "11.2.2"
+    "@primereact/types" "11.2.2"
+    primereact "11.2.2"
+
+"@primeui/license-manager@^1.0.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@primeui/license-manager/-/license-manager-1.1.0.tgz#d19ec4c6c4831b9b7b64a91a35b8c83cb50e69ed"
+  integrity sha512-irjhOGs6Xjwh1JhMyXtdUsYCsve6kBySZzDUhS/mWxsjwQm/wSN7oulyP/f5huJKdhZSzaN6rVApwpp4nDWE1g==
+
+"@primeuix/locale@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@primeuix/locale/-/locale-0.1.0.tgz#dcd386296aac8228edaa8f780a69c106aadcae29"
+  integrity sha512-/qLGiwQ/YN83GPSygKEI3cwgZ+rb0R0rNNtQrOGGaHIaG3zpkGS3QbK/qtDUi0leC69jJgY39GDX+gCeUXPKdg==
+  dependencies:
+    "@primeuix/utils" "^0.8.0"
+
+"@primeuix/motion@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@primeuix/motion/-/motion-1.0.0.tgz#625c2423adee9fa22cfd298a595828a8c20bf028"
+  integrity sha512-rqpFRKmUVp9BI3YQKdok0rLUwzYShXzuuxy72Kq74xYRV14eR+4+XrIXOdyVs7j7CYV0ajYowiRpJCrVgdrq6A==
+  dependencies:
+    "@primeuix/utils" "^0.8.0"
+
+"@primeuix/styled@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@primeuix/styled/-/styled-1.2.0.tgz#8ef8bcdefe8642db3ce605c0319b52cec22cf757"
+  integrity sha512-PaZ2CMkMGcW03XO3CawHbCCxB9rj0IFKj/7lOmNLYw9s4UqgeleJVii2BJ7P0Un3OxIG7oU9wnjsamrp1QFchQ==
+  dependencies:
+    "@primeuix/utils" "^0.8.3"
+
+"@primeuix/styles@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@primeuix/styles/-/styles-3.1.0.tgz#c414cb885d5aeace9598bf97cad7d6246cb4747e"
+  integrity sha512-xl1e8gcUhsqu1YgGIUe3R/PSKJHk88NMVwnOTVZZfptx955Rw0GkwvhRaeBh9iPVz4p5b7t9OiGJDWOu2qpX0Q==
+  dependencies:
+    "@primeuix/styled" "^1.2.0"
+
+"@primeuix/themes@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@primeuix/themes/-/themes-3.1.0.tgz#8e7ba4d5b23308f55ca3e657046807847821118e"
+  integrity sha512-/co1Vfo5JunRvjatdrTNYJ37j3fyXlvlN/NHgSNXToLP0ahhv4fxWAE5Q5A0C1PS/krrpXfXS2XIUBmKj/hzFg==
+  dependencies:
+    "@primeuix/styled" "^1.2.0"
+
+"@primeuix/utils@^0.8.0", "@primeuix/utils@^0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@primeuix/utils/-/utils-0.8.3.tgz#fff5dbd2e9c3c5953d340ef82b9a0bc872f3588f"
+  integrity sha512-UyFtnzxHfG7UqbOqUsjMXpe96h36eDre9Iw+zkZuJHsplHdoXNWgovDkoGZNxw4V5ZUHP1Y3pIu0kJw0OhmT0g==
+
 "@rolldown/binding-android-arm-eabi@1.2.16":
   version "1.2.16"
   resolved "https://registry.yarnpkg.com/@rolldown/binding-android-arm-eabi/-/binding-android-arm-eabi-1.2.16.tgz#abc3e1d5aacd1983d32a490c3a8793770da3bd1a"
@@ -1474,6 +1590,15 @@ prettier@3.9.10:
   version "3.9.10"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.9.10.tgz#ac378e432f1a7381518f2e080816bbaefa38d585"
   integrity sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==
+
+primereact@11.2.2:
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/primereact/-/primereact-11.2.2.tgz#0c48f4a18a323e07f190edc630a447efd4c682ee"
+  integrity sha512-AX4Bh+vrx08Fz4Pg6kBbtBTMKr/R8I+KAGH5H21XiYpHZlprEQi5S2kKljVeFD5cJ/zupDQSA+hWv8c68kZQVw==
+  dependencies:
+    "@primereact/core" "11.2.2"
+    "@primereact/headless" "11.2.2"
+    "@primereact/types" "11.2.2"
 
 punycode@^2.1.0:
   version "2.3.1"

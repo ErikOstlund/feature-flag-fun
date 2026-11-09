@@ -1,5 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { PrimeReactProvider } from "@primereact/core";
+import { primeReactConfig } from "theme/primereact";
 import App from "./App.tsx";
 
 const rootElement = document.getElementById("root");
@@ -10,6 +12,8 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <App />
+    <PrimeReactProvider {...primeReactConfig}>
+      <App />
+    </PrimeReactProvider>
   </StrictMode>
 );

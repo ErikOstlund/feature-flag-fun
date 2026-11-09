@@ -9,6 +9,7 @@ const SRC_ROOT_FOLDERS = [
   "features",
   "routes",
   "styles",
+  "theme",
   "types",
   "utils",
 ];
