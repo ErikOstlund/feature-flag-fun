@@ -1,4 +1,11 @@
 import { useState } from "react";
+
+import { $dt, usePreset as applyPreset } from "@primeuix/themes";
+import Aura from "@primeuix/themes/aura";
+import Lara from "@primeuix/themes/lara";
+import Material from "@primeuix/themes/material";
+import Nora from "@primeuix/themes/nora";
+
 import { ChevronDown } from "@primeicons/react/chevron-down";
 import { Select, type SelectValueChangeEvent } from "@primereact/ui/select";
 import { Button } from "@primereact/ui/button";
@@ -13,9 +20,41 @@ function App() {
     { label: "Paris", value: "PRS" },
   ];
 
+  const presets = { Aura, Material, Lara, Nora };
+  type PresetName = keyof typeof presets;
+
   const [city, setCity] = useState<string | null>(null);
+  const [active, setActive] = useState<PresetName>("Aura");
+
+  function choose(name: PresetName) {
+    applyPreset(presets[name]);
+    setActive(name);
+  }
   return (
     <>
+      <Button
+        onClick={() => {
+          console.log($dt("primary.color"));
+        }}
+      >
+        Log token
+      </Button>
+
+      <div style={{ display: "flex", gap: "0.5rem" }}>
+        {(Object.keys(presets) as PresetName[]).map((name) => (
+          <Button
+            key={name}
+            variant={name === active ? undefined : "outlined"}
+            aria-pressed={name === active}
+            onClick={() => {
+              choose(name);
+            }}
+          >
+            {name}
+          </Button>
+        ))}
+      </div>
+
       <Card.Root style={{ maxWidth: "24rem" }}>
         <Card.Body>
           <Card.Caption>
