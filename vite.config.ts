@@ -1,4 +1,5 @@
 import { fileURLToPath } from "node:url";
+import babel, { defineRolldownBabelPreset } from "@rolldown/plugin-babel";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
@@ -14,9 +15,17 @@ const SRC_ROOT_FOLDERS = [
   "utils",
 ];
 
+// Babel only runs on modules that mention styled-components
+const styledComponentsPreset = defineRolldownBabelPreset({
+  preset: () => ({
+    plugins: [["babel-plugin-styled-components", { pure: true }]],
+  }),
+  rolldown: { filter: { code: /styled-components/ } },
+});
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), babel({ presets: [styledComponentsPreset] })],
   resolve: {
     alias: Object.fromEntries(
       SRC_ROOT_FOLDERS.map((folder) => [

@@ -1,0 +1,93 @@
+/* Layer order is declared once, before any other styles, and matches PrimeReact's cssLayer.order. */
+@layer reset, primeui;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  *:not(dialog) {
+    margin: 0;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+
+  body {
+    line-height: 1.5;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+
+  :target {
+    scroll-margin-block: 5ex;
+  }
+
+  #root {
+    isolation: isolate;
+  }
+
+  /* !important in the lowest layer outranks every other layer's !important. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
