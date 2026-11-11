@@ -1,6 +1,8 @@
 import { useState } from "react";
+import styled from "styled-components";
 
 import { $dt, usePreset as applyPreset } from "@primeuix/themes";
+import { AppPreset } from "theme/preset";
 import Aura from "@primeuix/themes/aura";
 import Lara from "@primeuix/themes/lara";
 import Material from "@primeuix/themes/material";
@@ -20,18 +22,18 @@ function App() {
     { label: "Paris", value: "PRS" },
   ];
 
-  const presets = { Aura, Material, Lara, Nora };
+  const presets = { App: AppPreset, Aura, Material, Lara, Nora };
   type PresetName = keyof typeof presets;
 
   const [city, setCity] = useState<string | null>(null);
-  const [active, setActive] = useState<PresetName>("Aura");
+  const [active, setActive] = useState<PresetName>("App");
 
   function choose(name: PresetName) {
     applyPreset(presets[name]);
     setActive(name);
   }
   return (
-    <>
+    <Wrapper>
       <Button
         onClick={() => {
           console.log($dt("primary.color"));
@@ -126,8 +128,16 @@ function App() {
         </Select.Root>
         <p>Selected: {city ?? "nothing yet"}</p>
       </div>
-    </>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+`;
 
 export default App;

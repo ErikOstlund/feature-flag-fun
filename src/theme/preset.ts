@@ -1,3 +1,8 @@
+// Keep the file organized in the same order as the tiers:
+// primitive, semantic, then components, then extend.
+// When the file gets long, split each group into its own
+// file in src/theme/tokens/ and import them.
+
 import { definePreset } from "@primeuix/themes";
 import Aura from "@primeuix/themes/aura";
 
@@ -5,6 +10,10 @@ const semanticFocusRing = { focusRing: { color: "{focus.ring.color}" } };
 
 export const AppPreset = definePreset(Aura, {
   semantic: {
+    typography: {
+      fontFamily: "inherit",
+      fontSize: "1rem",
+    },
     focusRing: {
       width: "2px",
       style: "solid",
