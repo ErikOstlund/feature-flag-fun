@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { $dt, usePreset as applyPreset } from "@primeuix/themes";
 import { AppPreset } from "theme/preset";
