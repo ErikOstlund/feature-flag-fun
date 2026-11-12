@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { styled } from "styled-components";
 
-import { $dt, usePreset as applyPreset } from "@primeuix/themes";
+import { usePreset as applyPreset } from "@primeuix/themes";
 import { AppPreset } from "theme/preset";
 import Aura from "@primeuix/themes/aura";
 import Lara from "@primeuix/themes/lara";
@@ -34,15 +34,7 @@ function App() {
   }
   return (
     <Wrapper>
-      <Button
-        onClick={() => {
-          console.log($dt("primary.color"));
-        }}
-      >
-        Log token
-      </Button>
-
-      <div style={{ display: "flex", gap: "0.5rem" }}>
+      <ButtonGroupWrapper>
         {(Object.keys(presets) as PresetName[]).map((name) => (
           <Button
             key={name}
@@ -55,7 +47,13 @@ function App() {
             {name}
           </Button>
         ))}
-      </div>
+      </ButtonGroupWrapper>
+
+      <ButtonGroupWrapper>
+        <Button>Primary</Button>
+        <Button className="p-button-brand-secondary">Secondary</Button>
+        <Button className="p-button-brand-accent">Accent</Button>
+      </ButtonGroupWrapper>
 
       <Card.Root style={{ maxWidth: "24rem" }}>
         <Card.Body>
@@ -138,6 +136,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 60px;
+`;
+
+const ButtonGroupWrapper = styled.div`
+  display: flex;
+  gap: 10px;
 `;
 
 export default App;

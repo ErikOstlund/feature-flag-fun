@@ -7,8 +7,8 @@ import { definePreset, palette } from "@primeuix/themes";
 import Aura from "@primeuix/themes/aura";
 
 const red = palette("#f27277");
-
-const semanticFocusRing = { focusRing: { color: "{focus.ring.color}" } };
+const blueIris = palette("#00b7bf");
+const bluePacific = palette("#008dd0");
 
 const SHADES = [
   "50",
@@ -31,11 +31,29 @@ function lightDarkScale(light: string, dark: string): Record<string, string> {
   );
 }
 
+function brandButtonCss(role: "secondary" | "accent") {
+  return `
+  .p-button.p-button-brand-${role} {
+    background: dt('brand.${role}.color');
+    border-color: dt('brand.${role}.color');
+    color: dt('brand.${role}.contrast.color');
+    }
+  .p-button.p-button-brand-${role}:not(:disabled):hover {
+    background: dt('brand.${role}.hover.color');
+    border-color: dt('brand.${role}.hover.color');
+    color: dt('brand.${role}.contrast.color');
+    }
+  .p-button.p-button-brand-${role}:focus-visible {
+    outline-color: dt('brand.${role}.color');
+    }
+        `;
+}
+
 export const AppPreset = definePreset(Aura, {
-  primitive: { red },
+  primitive: { red, blueIris, bluePacific },
   semantic: {
-    surface: { 0: "#ffffff", ...lightDarkScale("stone", "zinc") },
     primary: palette("{red}"),
+    surface: { 0: "#ffffff", ...lightDarkScale("stone", "zinc") },
     typography: {
       fontFamily: "inherit",
       fontSize: "1rem",
@@ -43,28 +61,26 @@ export const AppPreset = definePreset(Aura, {
     focusRing: {
       width: "2px",
       style: "solid",
-      // color: "{primary.500}",
       offset: "2px",
     },
     formField: {
       hoverBorderColor: "{primary.500}",
     },
   },
-  // Aura's Button takes each severity's focus ring color from its own palette,
-  // not from semantic.focusRing.color. These point it back at the semantic
-  // token. They must sit under `root`: a flat `button.primary` override gets
-  // shadowed by Aura's `button.root.primary`.
   components: {
-    button: {
-      root: {
-        primary: semanticFocusRing,
-        secondary: semanticFocusRing,
-        info: semanticFocusRing,
-        success: semanticFocusRing,
-        warn: semanticFocusRing,
-        help: semanticFocusRing,
-        danger: semanticFocusRing,
-        contrast: semanticFocusRing,
+    button: { css: brandButtonCss("secondary") + brandButtonCss("accent") },
+  },
+  extend: {
+    brand: {
+      secondary: {
+        color: "light-dark({blueIris.600}, {blueIris.400})",
+        hoverColor: "light-dark({blueIris.700}, {blueIris.300})",
+        contrastColor: "light-dark(#ffffff, {blueIris.950})",
+      },
+      accent: {
+        color: "light-dark({bluePacific.500}, {bluePacific.400})",
+        hoverColor: "light-dark({bluePacific.600}, {bluePacific.300})",
+        contrastColor: "{bluePacific.950}",
       },
     },
   },
