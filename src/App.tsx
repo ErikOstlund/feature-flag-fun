@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { styled } from "styled-components";
 
-import { usePreset as applyPreset } from "@primeuix/themes";
+import { $dt, usePreset as applyPreset } from "@primeuix/themes";
 import { AppPreset } from "theme/preset";
 import Aura from "@primeuix/themes/aura";
 import Lara from "@primeuix/themes/lara";
@@ -50,9 +50,29 @@ function App() {
       </ButtonGroupWrapper>
 
       <ButtonGroupWrapper>
-        <Button>Primary</Button>
-        <Button className="p-button-brand-secondary">Secondary</Button>
-        <Button className="p-button-brand-accent">Accent</Button>
+        <Button
+          onClick={() => {
+            console.log($dt("primary.color"));
+          }}
+        >
+          Primary
+        </Button>
+        <Button
+          onClick={() => {
+            console.log($dt("secondary.color"));
+          }}
+          className="p-button-brand-secondary"
+        >
+          Secondary
+        </Button>
+        <Button
+          onClick={() => {
+            console.log($dt("accent.color"));
+          }}
+          className="p-button-brand-accent"
+        >
+          Accent
+        </Button>
       </ButtonGroupWrapper>
 
       <Card.Root style={{ maxWidth: "24rem" }}>
