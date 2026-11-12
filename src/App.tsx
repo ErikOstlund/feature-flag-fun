@@ -15,6 +15,9 @@ import { Card } from "@primereact/ui/card";
 import { Dialog } from "@primereact/ui/dialog";
 import { Times } from "@primeicons/react/times";
 
+import ColorSchemeToggle from "components/ColorSchemeToggle/ColorSchemeToggle";
+import ThemeLab from "features/ThemeLab/ThemeLab";
+
 function App() {
   const cities = [
     { label: "New York", value: "NY" },
@@ -34,6 +37,10 @@ function App() {
   }
   return (
     <Wrapper>
+      <ColorSchemeToggle />
+
+      <ThemeLab />
+
       <ButtonGroupWrapper>
         {(Object.keys(presets) as PresetName[]).map((name) => (
           <Button

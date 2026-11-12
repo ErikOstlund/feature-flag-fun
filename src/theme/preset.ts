@@ -83,5 +83,8 @@ export const AppPreset = definePreset(Aura, {
         contrastColor: "{bluePacific.950}",
       },
     },
+    app: {
+      background: "light-dark({surface.50}, {surface.950})",
+    },
   },
 });
