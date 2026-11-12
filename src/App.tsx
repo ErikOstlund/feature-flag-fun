@@ -22,11 +22,11 @@ function App() {
     { label: "Paris", value: "PRS" },
   ];
 
-  const presets = { App: AppPreset, Aura, Material, Lara, Nora };
+  const presets = { MP_App: AppPreset, Aura, Material, Lara, Nora };
   type PresetName = keyof typeof presets;
 
   const [city, setCity] = useState<string | null>(null);
-  const [active, setActive] = useState<PresetName>("App");
+  const [active, setActive] = useState<PresetName>("MP_App");
 
   function choose(name: PresetName) {
     applyPreset(presets[name]);

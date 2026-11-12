@@ -3,13 +3,39 @@
 // When the file gets long, split each group into its own
 // file in src/theme/tokens/ and import them.
 
-import { definePreset } from "@primeuix/themes";
+import { definePreset, palette } from "@primeuix/themes";
 import Aura from "@primeuix/themes/aura";
+
+const red = palette("#f27277");
 
 const semanticFocusRing = { focusRing: { color: "{focus.ring.color}" } };
 
+const SHADES = [
+  "50",
+  "100",
+  "200",
+  "300",
+  "400",
+  "500",
+  "600",
+  "700",
+  "800",
+  "900",
+  "950",
+] as const;
+
+/** A 50–950 scale that uses one palette in light mode and another in dark mode. */
+function lightDarkScale(light: string, dark: string): Record<string, string> {
+  return Object.fromEntries(
+    SHADES.map((s) => [s, `light-dark({${light}.${s}}, {${dark}.${s}})`])
+  );
+}
+
 export const AppPreset = definePreset(Aura, {
+  primitive: { red },
   semantic: {
+    surface: { 0: "#ffffff", ...lightDarkScale("stone", "zinc") },
+    primary: palette("{red}"),
     typography: {
       fontFamily: "inherit",
       fontSize: "1rem",
@@ -17,11 +43,11 @@ export const AppPreset = definePreset(Aura, {
     focusRing: {
       width: "2px",
       style: "solid",
-      color: "{purple.500}",
+      // color: "{primary.500}",
       offset: "2px",
     },
     formField: {
-      hoverBorderColor: "{purple.500}",
+      hoverBorderColor: "{primary.500}",
     },
   },
   // Aura's Button takes each severity's focus ring color from its own palette,
