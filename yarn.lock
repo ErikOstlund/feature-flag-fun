@@ -631,10 +631,10 @@
   dependencies:
     "@primeuix/styled" "^1.2.0"
 
-"@primeuix/themes@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@primeuix/themes/-/themes-3.1.0.tgz#8e7ba4d5b23308f55ca3e657046807847821118e"
-  integrity sha512-/co1Vfo5JunRvjatdrTNYJ37j3fyXlvlN/NHgSNXToLP0ahhv4fxWAE5Q5A0C1PS/krrpXfXS2XIUBmKj/hzFg==
+"@primeuix/themes@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@primeuix/themes/-/themes-3.1.1.tgz#e7afaa55ae277366380ef4a788a4c844fb7f1524"
+  integrity sha512-NDempN4bFl3ZYh8ZX/f3lUuvOPwgmmTV/tD44SOfUYJ3yX+UD5umwCjU40Y4TWjUsdbEvQZa/FtUXIWqbr6aZA==
   dependencies:
     "@primeuix/styled" "^1.2.0"
 
