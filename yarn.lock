@@ -555,6 +555,19 @@
     "@primeuix/styled" "^1.2.0"
     "@primeuix/utils" "^0.8.3"
 
+"@primereact/core@11.2.3":
+  version "11.2.3"
+  resolved "https://registry.yarnpkg.com/@primereact/core/-/core-11.2.3.tgz#3db467720b5ffdb4d3ddf0364d51e40aa723dee3"
+  integrity sha512-5HN9q8DWzL8fR7fs2+GwJ1iB4AuA+5bv9Qm9ZrcP2HccpUKsA0EUuzTO2+gusH8bpt8uIrJwQcpbkxJP/RiNQA==
+  dependencies:
+    "@primereact/hooks" "11.2.3"
+    "@primereact/types" "11.2.3"
+    "@primeui/license-manager" "^1.0.0"
+    "@primeuix/locale" "^0.1.0"
+    "@primeuix/motion" "^1.0.0"
+    "@primeuix/styled" "^1.2.0"
+    "@primeuix/utils" "^0.8.3"
+
 "@primereact/headless@11.2.2":
   version "11.2.2"
   resolved "https://registry.yarnpkg.com/@primereact/headless/-/headless-11.2.2.tgz#3b621d7f77ca87c68ffda973d0ee954aeca7cf53"
@@ -574,6 +587,13 @@
   dependencies:
     "@primeuix/utils" "^0.8.3"
 
+"@primereact/hooks@11.2.3":
+  version "11.2.3"
+  resolved "https://registry.yarnpkg.com/@primereact/hooks/-/hooks-11.2.3.tgz#0aa0b00ff0a9eb2cce3e225fd2731eb8e7f71a23"
+  integrity sha512-9JTZ7CN+LSeECo75S79DqQ3XgetYzusLBBe55yMihLAsDrIYlaYzn37QWCeKXucgonzJamnQFc9lNR2wj9MQxg==
+  dependencies:
+    "@primeuix/utils" "^0.8.3"
+
 "@primereact/styles@11.2.2":
   version "11.2.2"
   resolved "https://registry.yarnpkg.com/@primereact/styles/-/styles-11.2.2.tgz#65ed93cff141d0a67924d3e4bbf75c8795c70f96"
@@ -588,6 +608,11 @@
   version "11.2.2"
   resolved "https://registry.yarnpkg.com/@primereact/types/-/types-11.2.2.tgz#d7a181d9ddd42539128d773030614328f148f788"
   integrity sha512-N835KSkTS4wFwLXtNd/zrNzEYudH0xK8H3NYjgMMpJDUCWFgBHLPY+rB2liV8/1UXtvJMp2gxZKZeBLT097lJQ==
+
+"@primereact/types@11.2.3":
+  version "11.2.3"
+  resolved "https://registry.yarnpkg.com/@primereact/types/-/types-11.2.3.tgz#61e417f9109a489d8a4c4ed60063f09885f97eac"
+  integrity sha512-QkN3bcLCUPwwSFU27dtm3plT+PuGZUmrQxYM3Exwojpt10p3SBWvlUu/7hjRIJt8OYyMlsqkcGbT+uJiX1Q9Fg==
 
 "@primereact/ui@11.2.2":
   version "11.2.2"

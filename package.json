@@ -15,7 +15,7 @@
 	"dependencies": {
 		"@fontsource-variable/atkinson-hyperlegible-next": "5.3.0",
 		"@primeicons/react": "8.0.2",
-		"@primereact/core": "11.2.2",
+		"@primereact/core": "11.2.3",
 		"@primereact/ui": "11.2.2",
 		"@primeuix/themes": "3.1.0",
 		"react": "19.3.1",
